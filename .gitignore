@@ -1,0 +1,12 @@
+# Ignore dataset files
+data/*.csv
+data/*.json
+data/*.log
+
+# Ignore Power BI cache files
+dashboard/*.pbix
+
+# Ignore Python virtual environment
+venv/
+__pycache__/
+*.pyc
