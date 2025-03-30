@@ -1,27 +1,36 @@
-API Consumer Analytics & Anomaly Detection Dashboard
+API Analytics Dashboard for Financial Services
 
-This Streamlit dashboard provides insights into API usage behavior, system performance, and consumer activity using synthetic log data. Built for CST2213 BI Programming Final Project, the app highlights traffic patterns, top endpoints, and performance bottlenecks.
-
----
-
-Features
-
-- KPI Cards: Total Requests, Unique Consumers, Endpoints Accessed
-- Traffic Analytics: Requests over time and hourly patterns
-- Usage Breakdown: Top endpoints and top consumers
-- Performance Insights: Average response times by endpoint
-- Interactive Filtering: Filter by endpoint, consumer ID, and date range
+APIs are the nervous system of digital finance — but most teams don’t get the visibility they need. This project flips that. It’s a fully on-premise, Python-based system that ingests API log data, applies machine learning for anomaly detection, and visualizes real-time insights through a clean, responsive Streamlit dashboard.
 
 ---
 
-Technologies Used
+What it does
+
+- Tracks API usage over time with dynamic filters
+- Highlights top consumers and top endpoints
+- Measures system performance (latency, resource use)
+- Flags anomalies using Isolation Forest
+
+---
+
+Stack
 
 - Python 3.11+
-- Streamlit for interactive dashboard
-- Pandas for data manipulation
-- Matplotlib & Seaborn for visualizations
-- Scikit-learn for ML pipeline (Phase 5)
-- Jupyter Notebooks for development & documentation
+- Streamlit for UI
+- Pandas, Seaborn, Matplotlib for data & viz
+- Scikit-learn for ML
+- Jupyter Notebooks for dev workflow
+
+---
+
+Run it locally
+
+```bash
+pip install -r requirements.txt
+streamlit run streamlit_app.py
+```
+
+Make sure `data/api_logs_engineered.csv` exists — or generate one via the notebooks.
 
 ---
 
@@ -42,29 +51,12 @@ API-Consumer-Analytics-Anomaly-Detection/
 
 ---
 
-How to Run
+Why this matters
 
-```bash
-pip install -r requirements.txt
-streamlit run streamlit_app.py
-```
-
-Make sure the CSV is available at `data/api_logs_engineered.csv`
+APIs are essential, but their performance and behavior are often hard to monitor without expensive tooling. This project is lightweight, transparent, and extensible — built for teams who want to understand their systems better without vendor lock-in.
 
 ---
 
-Insights Delivered
+Built by
 
-- Discover peak usage hours and most accessed endpoints
-- Identify high-traffic consumers and performance-intensive endpoints
-- Support business decisions around scaling, optimization, and alerting
-
----
-
-Author
-
-Developed by Vasanth Gnana Seelan for the final submission of CST2213 - Business Intelligence Programming Project (Phase 6).
-
----
-
-For academic demonstration purposes only.
+Vasanth Gnana Seelan — fueled by Python, clean dashboards, and the occasional espresso.
